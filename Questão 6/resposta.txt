@@ -1,0 +1,9 @@
+-A expressão: *(pulo + 2) vai mostrar o valor do conteúdo apontado pelo pulo[2],
+ja que essa expressão remete a dois pulo do pulo[0] para o pulo[2]
+
+-A expressão: *(pulo + 4) vai mostrar o valor do conteúdo apontado pelo pulo[2],
+ja que essa expressão remete a dois pulo do pulo[0] para o pulo[4]
+
+-A expressão: pulo + 4 vai mostrar o endereço apontado pelo pulo[4]
+
+-A expressão: pulo + 2 vai mostrar o endereço apontado pelo pulo[2]
