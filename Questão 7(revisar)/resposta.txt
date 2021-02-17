@@ -1,0 +1,4 @@
+p = mat + 1;            //É valida. O ponteiro vai esta apotando para mat[1], ja que pulou de mat[0] para mat[1].
+p = mat++;		//Não é valida. Não tem como fazer um pós incrimento do mat para caminhar no vetor.
+p = ++mat;		//Não é valida. Não tem como fazer um pré incrimento do mat para caminhar no vetor.
+x = (*mat)++;		//É valida.

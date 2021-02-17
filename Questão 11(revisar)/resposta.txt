@@ -1,0 +1,12 @@
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+
+
+aloha[2] = value;               //válido
+scanf("%f", &aloha);		//válido
+aloha = value;			//invalido.Pois não especifica a posição do vetor aloha para armazenar o value
+printf("%f", aloha);		//válido
+coisas[4][4] = aloha[3];	//válido
+coisas[5] = aloha;		//invalido. (sem ideia para explicar kkkkk, eu sei que realmente não pode fazer isso)
+pf = value;			//invalido. Alocação de um poteiro para matriz se deve fazer de forma diferente de um array
+pf = aloha;			//válido

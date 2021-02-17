@@ -1,0 +1,2 @@
+O primeiro programa está imprimindo o contéudo do vetor vet(no caso, imprimir o conteúdo de vet[0],vet[1], vet[2]).
+Ja o segundo vai imprimir os endereços alocado pelo vetor vet (no caso, imprimir o endereço de vet[0],vet[1], vet[2]).
