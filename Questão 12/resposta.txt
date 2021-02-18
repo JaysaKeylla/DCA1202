@@ -1,1 +1,1 @@
-Ponteiro em uma função, serve principalmente para apontar a função a ser executada, sem precisar chamar a função de forma explicita.
+Ponteiro em uma função, serve principalmente para apontar a função a ser executada podendo assim acessar a lógica dentro dela, sem precisar chamar a função de forma explicita.
