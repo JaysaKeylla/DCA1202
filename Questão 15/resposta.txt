@@ -1,1 +1,42 @@
-a
+int compara(int *m,int *o) 
+{
+    return *m-*o;
+}
+void ordenaVetor(int *vet,int qe,int (*compara)(int *m,int *o)) 
+{
+    int aux,y,j;
+    for(y=0; y<qe; y++)
+    {
+        for(j=0; j<qe; j++)
+        {
+            if(compara(vet+y,vet+j)<0) 
+            {
+                aux = *(vet+y);
+                *(vet+y)=*(vet+j);
+                *(vet+j)=aux;
+            }
+        }
+    }
+
+}
+int main()
+{
+    int *l,k,y,(*comp)();
+    comp=compara;
+    scanf("%d",&k);
+    l = (int *)malloc(k*sizeof(int));
+    
+    for(y=0; y<k; y++)
+    {
+        *(l+y)=(k-y);
+    }
+    ordenaVetor(l,k,comp); 
+    
+    for(y=0; y<k; y++)
+    {
+        printf("%d\k",*(l+y));
+    }
+    
+    free(l);
+    return 0;
+}
