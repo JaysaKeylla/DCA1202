@@ -1,1 +1,1 @@
-a
+Ponteiro em uma função, serve principalmente para apontar a função a ser executada, sem precisar chamar a função de forma explicita.
