@@ -2,14 +2,18 @@ int main(){
     int *l,k,i;
     scanf("%d",&k);
     v = (int *)malloc(k*sizeof(int));
+    
     for(i=0;i<k;i++){
         scanf("%d",(l+i));
     }
+    
     for(i=0;i<k;i++){
         printf("%d",*(l+i));
     }
+    
     for(i=0;i<k;i++){
         int aux;
+        
         for(int j=0;j<k;j++){
             if(*(l+i)<*(l+j)){
                 aux=*(l+i);
@@ -18,9 +22,11 @@ int main(){
             }
         }
     }
+    
     for(i=0;i<k;i++){
         printf("%d",*(l+i));
     }
+    
     free(l);
     return 0;
 }
