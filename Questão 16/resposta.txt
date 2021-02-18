@@ -1,11 +1,11 @@
-inicioOV = clock();//capturando o clock do instante inicial em que a função ordenaVetor é chamada
+inicioOV = clock(); //capturando o clock do instante inicial em que a função ordenaVetor é chamada
 ordenaVetor(a1,x,comp); //chamada da função ordenaVetor usando um ponteiro para a funçao de comparação
-fimOV =clock()-inicioOV;//capturando o clock do instante final em relação ao inicial da função ordenaVetor
-inicioQS=clock();//capturando o clock do instante inicial em que a função Qsort é chamada
-qsort(a2,x,sizeof(int),comp);//chamada da função qsort usando um ponteiro para a funçao de comparação
-fimQS =clock()-inicioQS;//capturando o clock do instante final em relação ao inicial da função qsort
-tempoOV=(double)(fimOV)/CLOCKS_PER_SEC;//tempo que a função ordena vetor levou
-tempoQS=(double)(fimQS)/CLOCKS_PER_SEC;//tempo que a função Qsort levou
+fimOV = clock()-inicioOV;  //capturando o clock do instante final em relação ao inicial da função ordenaVetor
+inicioQS = clock(); //capturando o clock do instante inicial em que a função Qsort é chamada
+qsort(a2,x,sizeof(int),comp); //chamada da função qsort usando um ponteiro para a funçao de comparação
+fimQS =clock()-inicioQS; //capturando o clock do instante final em relação ao inicial da função qsort
+tempoOV=(double)(fimOV)/CLOCKS_PER_SEC; //tempo que a função ordena vetor levou
+tempoQS=(double)(fimQS)/CLOCKS_PER_SEC; //tempo que a função Qsort levou
 
 
 
