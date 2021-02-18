@@ -1,1 +1,62 @@
-a
+void MultiplicaMatriz(int *o,int *h,int *t,int lus,int kss,int ytt)
+{
+    for(int i=0; i<kss; i++) 
+    {
+        for(int j=0; j<ytt; j++) 
+        {
+            *(o+j+i*ytt)=0;
+            for(int k=0; k<lus; k++) 
+            {
+                *(o+j+i*ytt)+=(*(h+k+i*lus))*(*(t+k*ytt+j));
+            }
+        }
+    }
+}
+int main()
+{
+    int lus=3,kss=5,ytt=2;
+    int *h,*t,*c;
+    h=(int *)malloc(kss*lus*(sizeof(int)));
+    t=(int *)malloc(ytt*lus*(sizeof(int)));
+    c=(int *)malloc(ytt*kss*(sizeof(int)));
+    for(int i=0; i<kss; i++)
+    {
+        for(int j=0; j<lus; j++)
+        {
+            *(h+j+i*lus)=i+j;
+        } 
+    }
+    for(int i=0; i<lus; i++)
+    {
+        for(int j=0; j<ytt; j++)
+        {
+            *(t+j+i*ytt)=i+j;
+        }
+    }
+    MultiplicaMatriz(c,h,t,lus,kss,ytt);
+    for(int i=0; i<kss; i++) 
+    {
+        printf("\n");
+        for(int j=0; j<lus; j++)
+        {
+            printf("%d",*(h+j+i*lus));
+        }
+    }
+    for(int i=0; i<lus; i++) 
+    {
+        printf("\n");
+        for(int j=0; j<ytt; j++)
+        {
+            printf("%d",*(t+j+i*ytt));
+        }
+    }
+    for(int i=0; i<kss; i++) 
+    {
+        printf("\n");
+        for(int j=0; j<ytt; j++)
+        {
+            printf("%d",*(c+j+i*ytt));
+        }
+    }
+    return 0;
+}
