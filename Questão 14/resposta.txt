@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 int comparar(const void *a,const void *b){
     return *(int*)a-*(int*)b;
 }
@@ -10,9 +12,13 @@ int main(){
     for(i=0;i<k;i++){
         *(l+i)=k-i;
     }
+        for(i=0;i<k;i++){
+        printf("%d ",*(l+i));
+    }
+    printf("\n");
     qsort(l,k,sizeof(int),c);
     for(i=0;i<k;i++){
-        printf("%d \n",*(l+i));
+        printf("%d ",*(l+i));
     }
     free(l);
     return 0;
