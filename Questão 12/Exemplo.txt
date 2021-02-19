@@ -1,0 +1,17 @@
+#include <stdlib.h>
+
+int maior (int a, int b ){
+    if(b>a){
+        return b;
+    }
+return a ;
+}
+int main(void){
+    int a, b;
+    a= 20;
+    b= 10;
+    int (*pf)(int,int) = &maior;
+    printf("Valor= %d", pf(a,b));
+
+   return 0;
+}
