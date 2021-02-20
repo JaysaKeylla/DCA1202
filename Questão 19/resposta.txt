@@ -1,5 +1,38 @@
-#include "gc.h"
+//algumas funções do Garbage Collecting
 void * GC_malloc(size_t size);
 void GC_free(void *ptr);
 void * GC_realloc(void *ptr, size_t size);
 
+//outras funções GC_malloc_atomic, GC_enable_incremental, GC_register_finalizer, GC_malloc_ignore_off_page, GC_malloc_atomic_ignore_off_page, GC_set_warn_proc 
+
+//podemos comparar o que suas funções fazem com funções utilizadas comumnete 
+#include <gc.h>
+
+void *
+malloc(size_t size)
+{
+
+	return (GC_MALLOC(size));
+}
+
+void *
+calloc(size_t number, size_t size)
+{
+
+	/* GC_malloc() clears the storage. */
+	return (GC_MALLOC(number * size));
+}
+
+void *
+realloc(void *ptr, size_t size)
+{
+
+	return (GC_REALLOC(ptr, size));
+}
+
+void
+free(void *ptr)
+{
+
+	GC_FREE(ptr);
+}
