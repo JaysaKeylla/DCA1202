@@ -1,19 +1,21 @@
 int main(){
-    int *l,k,i;
+    float *l;
+    int k,i;
     scanf("%d",&k);
-    v = (int *)malloc(k*sizeof(int));
-    
+    l = malloc(k*sizeof(float));
+
     for(i=0;i<k;i++){
-        scanf("%d",(l+i));
+        scanf("%f",(l+i));
     }
-    
+
     for(i=0;i<k;i++){
-        printf("%d",*(l+i));
+        printf(" %.2f ",*(l+i));
     }
-    
+    printf("\n");
+
     for(i=0;i<k;i++){
-        int aux;
-        
+        float aux;
+
         for(int j=0;j<k;j++){
             if(*(l+i)<*(l+j)){
                 aux=*(l+i);
@@ -22,11 +24,11 @@ int main(){
             }
         }
     }
-    
+
     for(i=0;i<k;i++){
-        printf("%d",*(l+i));
+        printf(" %.2f ",*(l+i));
     }
-    
+
     free(l);
     return 0;
 }
