@@ -5,8 +5,8 @@ void somaVetor(int *o,int *a,int *b,int n){
 }
 int main(){
   int a[4]={1,3,0,-2},b[4]={3,5,-3,1},r[4];
-  somaVetor(o,a,b,4);
+  somaVetor(r,a,b,4);
   for(int i=0;i<4;i++){
-    printf("%d\n",*(o+i));
+    printf(" %d ",*(r+i));
   }
 }

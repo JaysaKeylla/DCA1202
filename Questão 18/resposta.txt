@@ -1,11 +1,11 @@
 void MultiplicaMatriz(int *o,int *h,int *t,int lus,int kss,int ytt)
 {
-    for(int i=0; i<kss; i++) 
+    for(int i=0; i<kss; i++)
     {
-        for(int j=0; j<ytt; j++) 
+        for(int j=0; j<ytt; j++)
         {
             *(o+j+i*ytt)=0;
-            for(int k=0; k<lus; k++) 
+            for(int k=0; k<lus; k++)
             {
                 *(o+j+i*ytt)+=(*(h+k+i*lus))*(*(t+k*ytt+j));
             }
@@ -24,7 +24,7 @@ int main()
         for(int j=0; j<lus; j++)
         {
             *(h+j+i*lus)=i+j;
-        } 
+        }
     }
     for(int i=0; i<lus; i++)
     {
@@ -34,29 +34,32 @@ int main()
         }
     }
     MultiplicaMatriz(c,h,t,lus,kss,ytt);
-    for(int i=0; i<kss; i++) 
+    for(int i=0; i<kss; i++)
     {
         printf("\n");
         for(int j=0; j<lus; j++)
         {
-            printf("%d",*(h+j+i*lus));
+            printf(" %d ",*(h+j+i*lus));
         }
     }
-    for(int i=0; i<lus; i++) 
+    printf("\n");
+    for(int i=0; i<lus; i++)
     {
         printf("\n");
         for(int j=0; j<ytt; j++)
         {
-            printf("%d",*(t+j+i*ytt));
+            printf(" %d ",*(t+j+i*ytt));
         }
     }
-    for(int i=0; i<kss; i++) 
+    printf("\n");
+    for(int i=0; i<kss; i++)
     {
         printf("\n");
         for(int j=0; j<ytt; j++)
         {
-            printf("%d",*(c+j+i*ytt));
+            printf(" %d ",*(c+j+i*ytt));
         }
     }
+    printf("\n");
     return 0;
 }
