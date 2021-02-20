@@ -1,1 +1,5 @@
-a
+#include "gc.h"
+void * GC_malloc(size_t size);
+void GC_free(void *ptr);
+void * GC_realloc(void *ptr, size_t size);
+
