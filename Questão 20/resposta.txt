@@ -1,1 +1,47 @@
-a
+#include <stdlib.h>
+
+void *malloc(size_t size);
+
+void exemple(void)
+{
+  char *string;
+
+  string = malloc(sizeof(char) * 5);
+  if (string == NULL)
+    return;
+  string[0] = 'D';
+  string[1] = 'C';
+  string[2] = 'A';
+  string[3] = '12';
+  string[4] = '02';
+  printf("%s\n", string);
+  free(string);
+}
+void main(void){
+    exemple();
+}
+-----------------------------------------------------
+
+
+#include "gc.h"
+
+void *GC_malloc(size_t size);
+
+void exemple(void)
+{
+  char *string;
+
+  string = GC_malloc(sizeof(char) * 5);
+  if (string == NULL)
+    return;
+  string[0] = 'D';
+  string[1] = 'C';
+  string[2] = 'A';
+  string[3] = '12';
+  string[4] = '02';
+  printf("%s\n", string);
+  GC_free(string);
+}
+void main(void){
+    exemplo();
+}
